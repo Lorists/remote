@@ -13,11 +13,13 @@ race:
   fields:
     name: true
     win:
-      type: select
-      ref: attribute
+      type: ref
+      csv: attribute
+      property: name
     loose:
-      type: select
-      ref: attribute
+      type: ref
+      csv: attribute
+      property: name
 ---
 {% include widgets/form.html form=page.attribute %}
 {% include widgets/table.html file=attribute.csv %}
