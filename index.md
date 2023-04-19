@@ -14,10 +14,10 @@ race:
     name: true
     win:
       type: select
-      ref: attribute.csv
+      ref: attribute
     loose:
       type: select
-      ref: attribute.csv
+      ref: attribute
 ---
 {% include widgets/form.html form=page.attribute %}
 {% include widgets/table.html file=attribute.csv %}
