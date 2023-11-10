@@ -1,36 +1,25 @@
 ---
 title: Remote
 team:
-  file: team.csv
+  file: team.json
   fields:
     name: true
-    slogan:
-      type: textarea
+    color_1:
+      type: color
+    color_2:
+      type: color
     race:
       type: ref
-      csv: race
-      property: name
-race:
-  file: race.csv
+      csv: races
+races:
+  file: races.csv
   fields:
     name: true
-    image: true
-player:
-  file: players.csv
-  fields:
-    name: true
-    ma:
-      type: number
-    st:
-      type: number
-    ag:
-      type: number
-    skills:
-      type: select
-      multiple: true
-      default: [Block, Catch, Dodge, Pass, Sure Hands]
 ---
+**Race form**
+
+{% include widgets/form.html form=page.races class='unfork' %}
+
+**Team form**
+
 {% include widgets/form.html form=page.team %}
-{% include widgets/table.html file=team.csv %}
-{% include widgets/form.html form=page.race %}
-{% include widgets/table.html file=race.csv %}
